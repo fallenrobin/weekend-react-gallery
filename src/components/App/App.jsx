@@ -1,8 +1,6 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
-import '../modules/gallery.data.js';
 import axios from 'axios';
-import { useEffect, useState } from 'react';
 import GalleryList from '../GalleryList/GalleryList';
 
 
@@ -14,11 +12,13 @@ function App() {
   // Call function so it runs once on page load
   // Similar to jQuery's document ready
   useEffect(() => {
-    fetchGalleryItems();
+    fetchGalleryList();
   }, [])
 
-  const fetchGalleryItems = () => {
-    axios.get ('/gallery')
+  const fetchGalleryList = () => {
+
+
+    axios.get('/gallery')
       .then((response) => {
         console.log('Entire response:', response);
         // The actual array comes from the data attribute on the response
@@ -30,6 +30,7 @@ function App() {
       .catch(function (error) {
         console.log('Error on get:', error);
       });
+    }
 
     return (
       <div className="App">
@@ -37,13 +38,11 @@ function App() {
           <h1 className="App-title">Gallery of My Life</h1>
         </header>
         <p>Gallery goes here</p>
-        {/* GalleryList */}
         <GalleryList
-        galleryList={galleryList}
+          galleryList={galleryList}
         />
-
       </div>
     );
-}
+  }
 
-export default App;
+  export default App;
