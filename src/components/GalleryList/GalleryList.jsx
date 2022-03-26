@@ -2,15 +2,17 @@ import GalleryItem from '../GalleryItem/GalleryItem';
 
 
 function GalleryList({ galleryList }) {
-    console.log(galleryList);
+    // console.log(galleryList);
     return (
         <>
-            {galleryList.map(photo =>
-            (<GalleryItem
-                key={photo.id}
-                photo={photo}
-            />)
-            )}
+            <div id="galleryBox">
+                {galleryList.map(photo =>
+                (<GalleryItem
+                    key={photo.id}
+                    photo={photo}
+                />)
+                )}
+            </div>
         </>
     )
 }

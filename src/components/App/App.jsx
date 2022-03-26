@@ -20,9 +20,9 @@ function App() {
 
     axios.get('/gallery')
       .then((response) => {
-        console.log('Entire response:', response);
+        // console.log('Entire response:', response);
         // The actual array comes from the data attribute on the response
-        console.log('Just the data:', response.data);
+        // console.log('Just the data:', response.data);
 
         // Set data into component state
         setGalleryList(response.data);
