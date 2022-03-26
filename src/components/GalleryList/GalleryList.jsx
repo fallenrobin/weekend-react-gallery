@@ -1,22 +1,18 @@
-import StudentItem from '../StudentItem/StudentItem';
+import GalleryItem from '../GalleryItem/GalleryItem';
 
 
 function GalleryList({ galleryList }) {
-    console.log(GalleryList);
+    console.log(galleryList);
     return (
         <>
             {galleryList.map(photo =>
-            (<StudentItem
+            (<GalleryItem
                 key={photo.id}
                 photo={photo}
             />)
             )}
         </>
-    );
+    )
 }
 
-
-
-
-
-export default GalleryList 
+export default GalleryList; 
