@@ -4,7 +4,7 @@ const galleryItems = [
     { id: 3, path: 'images/squareDolo.jpg', description: 'Up in Dolomiti di Brenta', likes: 0 },
     { id: 4, path: 'images/squareJammies.jpg', description: 'Breakfast jammies!!', likes: 0 },
     { id: 5, path: 'images/squareNapoli.jpg', description: 'I am totally normal', likes: 0 },
-    { id: 6, path: 'images/squareNewborn.jpg', description: 'Happy daddy... also yes this pic was already b&w', likes: 0 },
+    { id: 6, path: 'images/squareNewborn.jpg', description: 'Yes this pic was already b&w', likes: 0 },
     { id: 7, path: 'images/squareDad.jpg', description: 'Grandpa Steve', likes: 0 },
     { id: 8, path: 'images/squareSFBI.jpg', description: 'In another lifetime...', likes: 0 },
     { id: 9, path: 'images/squarejTreats.jpg', description: 'Shameless plug!', likes: 0 }
