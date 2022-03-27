@@ -1,12 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Cute+Font&family=Indie+Flower&family=Permanent+Marker&family=Smokum&display=swap');
+
 .App {
   text-align: center;
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("cork-gb2e725bb5_1920.jpg"); */
+  /* -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; */
+  background-color: rgba(185, 170, 147, 0.657);
 }
 
 .App-header {
-  background-color: #222;
-  padding: 1em;
-  color: white;
-  margin-bottom: 1em;
+  background-color: rgba(216, 203, 144, 0.466);
+  padding: .5%;
+  color: black;
+  margin-bottom: 2%;
+  font-size: 350%;
+  font-family: 'Cute Font', cursive;
+  text-shadow: 20px 20px 50px black;
 }
 
 .App-title {
@@ -14,14 +25,45 @@
 }
 
 .photos {
-  height: 20%;
-  width: 20%;
-  margin-top: 2%;
+  height: 90%;
+  width: 90%;
+  margin-top: 3%;
+  margin-left: 2%;
+  margin-right: 2%;
+  /* border: 1px solid gray; */
+  border-radius: 8px;
+  /* display: flex; */
+  box-shadow: 10px 3px 30px black;
+}
+
+/* https://thebrandsmen.com/css-image-hover-effects/  */
+.color img {
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  -webkit-transition: all 1s ease;
+}
+
+.color img:hover {
+  filter: grayscale(0%);
+  filter: gray;
+  -webkit-filter: grayscale(0%);
+  filter: none;
+  transition: 1s ease;
+}
+
+.caption {
+  background-color: rgba(192, 164, 118, 0.397);
+  height: 330px;
+  width: 330px;
+  margin-top: 3%;
   margin-left: 2%;
   margin-right: 2%;
   border: 1px solid gray;
   border-radius: 8px;
-  /* display: flex; */
+  text-align: center;
+  line-height: 330px;
+  font-family: 'Permanent Marker', cursive;
+  
 }
 
 button {
@@ -29,5 +71,30 @@ button {
 }
 
 #galleryBox {
- /* display: flex; */
+  display: grid;
+  grid: repeat(3, 35%) / auto-flow 30%;
+  margin-left: 7%;
+}
+
+#galleryBox>div {
+  width: 100%;
+  height: 100%;
+  /* display: flex; */
+  justify-items: center;
+  align-items: center;
+}
+
+.heart {
+  /* display: inline-block; */
+  color: rgb(167, 42, 42);
+}
+
+.likeCount {
+  display: inline-block;
+  /* padding-bottom: 5%; */
+  /* margin-bottom: 3%; */
+  font-size: larger;
+  background-color: rgba(235, 230, 224, 0.445);
+  width: 25%;
+  border-radius: 15px;
 }
