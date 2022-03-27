@@ -14,8 +14,8 @@
 }
 
 .photos {
-  height: 20%;
-  width: 20%;
+  height: 60%;
+  width: 60%;
   margin-top: 2%;
   margin-left: 2%;
   margin-right: 2%;
@@ -24,10 +24,27 @@
   /* display: flex; */
 }
 
+.caption {
+  height: 15%;
+  width: 15%;
+  margin-top: 1%;
+  /* margin-left: 2%;
+  margin-right: 2%; */
+  border: 1px solid gray;
+  border-radius: 8px;
+}
+
 button {
   margin-top: 1%;
 }
 
 #galleryBox {
- /* display: flex; */
+ display: grid;
+ grid: repeat(3, 30%) / auto-flow 30%;
 }
+
+#galleryBox > div {
+  width: 30%;
+  height: 30%;
+}
+

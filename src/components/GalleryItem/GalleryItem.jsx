@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import FavoriteIcon from '@mui/icons-material/Favorite';
 
 
 function GalleryItem({ photo, updateItem }) {
@@ -17,12 +18,16 @@ function GalleryItem({ photo, updateItem }) {
 
     return (
         <>
-            <div onClick={handleShowHide}>
-                {showPhoto ? <img key={photo.id} className="photos" src={photo.path} /> : <p className= "photos" >{photo.description}</p> }
+            <div>
+                <div onClick={handleShowHide}>
+                    {showPhoto ? <img key={photo.id} className="photos" src={photo.path} />
+                        : <p className="caption" >{photo.description}</p>}
+                </div>
+                <div>
+                    {/* <button onClick={handleLike}>🐕 WAOW SUCH LIKE 🐕</button> <p>{photo.likes}</p> */}
+                    <FavoriteIcon onClick={handleLike}/> <p>{photo.likes}</p>
+                </div>
             </div>
-
-                <button onClick={handleLike}>🐕 WAOW SUCH LIKE 🐕</button> <p>{photo.likes}</p>
-       
         </>
     )
 }
