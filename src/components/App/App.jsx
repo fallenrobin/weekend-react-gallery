@@ -20,9 +20,9 @@ function App() {
 
     axios.get('/gallery')
       .then((response) => {
-        console.log('Entire response:', response);
+        // console.log('Entire response:', response);
         // The actual array comes from the data attribute on the response
-        console.log('Just the data:', response.data);
+        // console.log('Just the data:', response.data);
 
         // Set data into component state
         setGalleryList(response.data);
@@ -30,19 +30,31 @@ function App() {
       .catch(function (error) {
         console.log('Error on get:', error);
       });
-    }
-
-    return (
-      <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Gallery of My Life</h1>
-        </header>
-        <p>Gallery goes here</p>
-        <GalleryList
-          galleryList={galleryList}
-        />
-      </div>
-    );
   }
 
-  export default App;
+  const updateItem = (galleryItem) => {
+    axios.put(`/gallery/like/${galleryItem.id}`)
+      .then((response) => {
+        fetchGalleryList();
+        console.log('Updated:', galleryItem.likes);
+      })
+      .catch(function (error) {
+        console.log('Error in PUT:', error);
+      });
+  }
+
+  return (
+    <div className="App">
+      <header className="App-header">
+        <h1 className="App-title">Gallery of My Life</h1>
+      </header>
+      <p>Gallery goes here</p>
+      <GalleryList
+        galleryList={galleryList}
+        updateItem={updateItem}
+      />
+    </div>
+  );
+}
+
+export default App;
