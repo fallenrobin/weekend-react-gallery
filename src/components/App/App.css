@@ -2,12 +2,6 @@
 
 .App {
   text-align: center;
-  /* background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("cork-gb2e725bb5_1920.jpg"); */
-  /* -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; */
-  background-color: rgba(185, 170, 147, 0.657);
 }
 
 .App-header {
@@ -24,16 +18,55 @@
   font-size: 1.5em;
 }
 
-.photos {
+.photos, .caption {
+  border: transparent;
   height: 90%;
   width: 90%;
   margin-top: 3%;
   margin-left: 2%;
-  margin-right: 2%;
+  margin-right: 5%;
+  border-radius: 8px;
+  /* box-shadow: 10px 3px 20px black; */
+  background-color: rgba(192, 164, 118, 0.397);
   /* border: 1px solid gray; */
   border-radius: 8px;
+  font-family: 'Permanent Marker', cursive;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.picAndCaption{
+  height: 80%;
+  /* width: 85%; */
+}
+
+.picPlusLikes{
+  height: 100%;
+  width: 100%;
   /* display: flex; */
-  box-shadow: 10px 3px 30px black;
+  /* align-items: center;
+  justify-content: center; */
+}
+
+.heart {
+  /* display: inline-block; */
+  color: rgb(167, 42, 42);
+}
+
+.likeCount {
+  z-index: 1000;
+  display: inline-block;
+  /* padding-bottom: 5%; */
+  /* margin-bottom: 3%; */
+  font-size: larger;
+  background-color: rgba(235, 230, 224, 0.445);
+  width: 25%;
+  border-radius: 15px;
+}
+
+.likeButtons {
+  margin-bottom: 5%;
 }
 
 /* https://thebrandsmen.com/css-image-hover-effects/  */
@@ -51,50 +84,38 @@
   transition: 1s ease;
 }
 
-.caption {
-  background-color: rgba(192, 164, 118, 0.397);
-  height: 330px;
-  width: 330px;
-  margin-top: 3%;
-  margin-left: 2%;
-  margin-right: 2%;
-  border: 1px solid gray;
-  border-radius: 8px;
-  text-align: center;
-  line-height: 330px;
-  font-family: 'Permanent Marker', cursive;
-  
-}
-
 button {
   margin-top: 1%;
 }
 
 #galleryBox {
   display: grid;
-  grid: repeat(3, 35%) / auto-flow 30%;
-  margin-left: 7%;
+  grid: repeat(3, 32%) / auto-flow 31%;
+  align-content: center;
+  justify-content: center;
 }
 
 #galleryBox>div {
   width: 100%;
   height: 100%;
   /* display: flex; */
-  justify-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+
+/* .caption {
+  background-color: rgba(192, 164, 118, 0.397);
+  height: 90%;
+  width: 90%;
+  margin-top: 3%;
+  margin-left: 2%;
+  margin-right: 2%;
+  border: 1px solid gray;
+  border-radius: 8px;
+  font-family: 'Permanent Marker', cursive;
+  box-shadow: 10px 3px 30px black;
+  display: flex;
   align-items: center;
-}
-
-.heart {
-  /* display: inline-block; */
-  color: rgb(167, 42, 42);
-}
-
-.likeCount {
-  display: inline-block;
-  /* padding-bottom: 5%; */
-  /* margin-bottom: 3%; */
-  font-size: larger;
-  background-color: rgba(235, 230, 224, 0.445);
-  width: 25%;
-  border-radius: 15px;
-}
+  justify-content: center;
+} */

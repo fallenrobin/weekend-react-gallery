@@ -18,16 +18,16 @@ function GalleryItem({ photo, updateItem }) {
 
     return (
         <>
-            <div>
-                <div onClick={handleShowHide}>
-                    {showPhoto ? <div className='color'><img key={photo.id} className="photos" src={photo.path}/></div> 
-                        : <p className="caption" >{photo.description}</p>}
+            <div className="picPlusLikes">
+                <div className="picAndCaption" onClick={handleShowHide}>
+                    {showPhoto ? <div className="color"><img key={photo.id} className="photos" src={photo.path}/></div> 
+                        : <div className="caption"><p >{photo.description}</p></div>}
                 </div>
                 <div className='likeButtons'>
                     {/* <button onClick={handleLike}>🐕 WAOW SUCH LIKE 🐕</button> <p>{photo.likes}</p> */}
-                    <div>
+                    
                         <p className="likeCount"><span><FavoriteIcon className="heart" onClick={handleLike} /></span>  {photo.likes}</p></div>
-                </div>
+                
             </div>
         </>
     )
