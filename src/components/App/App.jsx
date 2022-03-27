@@ -36,7 +36,7 @@ function App() {
     axios.put(`/gallery/like/${galleryItem.id}`)
       .then((response) => {
         fetchGalleryList();
-        console.log('Updated:', galleryItem.likes);
+        console.log('Updated:', galleryItem.likes, galleryItem.path);
       })
       .catch(function (error) {
         console.log('Error in PUT:', error);
