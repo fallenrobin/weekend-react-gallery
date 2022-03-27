@@ -1,16 +1,21 @@
 import React, { useState } from 'react';
 
 
-function GalleryItem({ photo }) {
+function GalleryItem({ photo, updateItem }) {
     // console.log(photo);
-    const [likes, setLikes] = useState(0);
+    
+    const handleLike = () => {
+        updateItem(photo);
+    }
 // console.log(likes);
     return (
         <>
             <div>
-                <img className="photos" src={photo.path} />
+                <img 
+                key={photo.id}
+                className="photos" src={photo.path} />
                 <div>
-                    <button onClick={(event) => setLikes(likes +1)}>WAOW SUCH LIKE</button> <p>{likes}</p>
+                    <button onClick={handleLike}>🐕 WAOW SUCH LIKE 🐕</button> <p>{photo.likes}</p>
                 </div>
             </div>
         </>

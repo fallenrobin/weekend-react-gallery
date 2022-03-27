@@ -20,6 +20,7 @@
   margin-left: 2%;
   margin-right: 2%;
   border-radius: 8px;
+  /* display: flex; */
 }
 
 button {
@@ -27,5 +28,5 @@ button {
 }
 
 #galleryBox {
- /* display: inline-table; */
+ /* display: flex; */
 }
