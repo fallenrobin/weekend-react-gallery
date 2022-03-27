@@ -20,7 +20,7 @@ function GalleryItem({ photo, updateItem }) {
         <>
             <div>
                 <div onClick={handleShowHide}>
-                    {showPhoto ? <img key={photo.id} className="photos" src={photo.path} />
+                    {showPhoto ? <div className='color'><img key={photo.id} className="photos" src={photo.path}/></div> 
                         : <p className="caption" >{photo.description}</p>}
                 </div>
                 <div className='likeButtons'>

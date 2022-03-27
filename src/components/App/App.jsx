@@ -46,7 +46,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1 className="App-title">My pics: you can love 'em or leave 'em!</h1>
+        <h1 className="App-title">My photos: love 'em, click 'em, stick 'em in a stew</h1>
       </header>
       <GalleryList
         galleryList={galleryList}
