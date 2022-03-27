@@ -1,12 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Cute+Font&family=Indie+Flower&family=Permanent+Marker&family=Smokum&display=swap');
+
 .App {
   text-align: center;
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("cork-gb2e725bb5_1920.jpg"); */
+  /* -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; */
+  background-color: rgba(185, 170, 147, 0.657);
 }
 
 .App-header {
-  background-color: #222;
-  padding: 1em;
-  color: white;
-  margin-bottom: 1em;
+  background-color: rgba(216, 203, 144, 0.466);
+  padding: .5%;
+  color: black;
+  margin-bottom: 2%;
+  font-size: 350%;
+  font-family: 'Cute Font', cursive;
+  text-shadow: 20px 20px 50px black;
 }
 
 .App-title {
@@ -19,15 +30,16 @@
   margin-top: 3%;
   margin-left: 2%;
   margin-right: 2%;
-  border: 1px solid gray;
+  /* border: 1px solid gray; */
   border-radius: 8px;
   /* display: flex; */
-  text-align: center;
+  box-shadow: 20px 20px 50px black;
 }
 
 .caption {
-  height: 300px;
-  width: 300px;
+  background-color: bisque;
+  height: 350px;
+  width: 350px;
   margin-top: 3%;
   margin-left: 2%;
   margin-right: 2%;
@@ -44,6 +56,7 @@ button {
 #galleryBox {
   display: grid;
   grid: repeat(3, 35%) / auto-flow 30%;
+  margin-left: 7%;
 }
 
 #galleryBox>div {
@@ -55,16 +68,16 @@ button {
 }
 
 .heart {
+  /* display: inline-block; */
   color: rgb(167, 42, 42);
-}
-
-.heart {
-  display: inline-block;
 }
 
 .likeCount {
   display: inline-block;
-  padding-bottom: 5%;
-  margin-bottom: 3%;
+  /* padding-bottom: 5%; */
+  /* margin-bottom: 3%; */
   font-size: larger;
+  background-color: rgba(235, 230, 224, 0.637);
+  width: 25%;
+  border-radius: 15px;
 }
