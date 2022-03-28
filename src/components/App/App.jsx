@@ -6,7 +6,7 @@ import GalleryList from '../GalleryList/GalleryList';
 
 
 function App() {
-
+  // 'variable' 
   const [galleryList, setGalleryList] = useState([]);
 
   // Call function so it runs once on page load
@@ -21,10 +21,10 @@ function App() {
     axios.get('/gallery')
       .then((response) => {
         // console.log('Entire response:', response);
-        // The actual array comes from the data attribute on the response
+        // The actual array comes from the data in the response
         // console.log('Just the data:', response.data);
 
-        // Set data into component state
+        // Save data in the 'variable,' aka useState
         setGalleryList(response.data);
       })
       .catch(function (error) {
@@ -32,10 +32,11 @@ function App() {
       });
   }
 
+  // The PUT route on the server side increments the clicked 'likes'
   const updateItem = (galleryItem) => {
     axios.put(`/gallery/like/${galleryItem.id}`)
       .then((response) => {
-        fetchGalleryList();
+        fetchGalleryList(); //gets updated amount of likes
         console.log('Updated:', galleryItem.likes, galleryItem.path);
       })
       .catch(function (error) {
@@ -43,11 +44,12 @@ function App() {
       });
   }
 
-  return (
-    <div className="App">
-      <header className="App-header">
+  return (//Header could be a component but seems like overkill here
+    <div className="App"> 
+      <header className="App-header"> 
         <h1 className="App-title">My photos: like 'em, click 'em, stick 'em in a stew</h1>
       </header>
+      {/* GalleryList passes these props to the component */}
       <GalleryList
         galleryList={galleryList}
         updateItem={updateItem}
